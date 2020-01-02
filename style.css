@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    color: rgb(5, 5, 5);
+}    
+
+header {
+    border-bottom: darkslategray 5px solid;
+    padding: 10px 0 10px 0;
+    margin-bottom: 40px;
+    background-color: #ffffff;
+}
+
+.namers {
+    width: 700px;
+    height: 40px;
+    background-color: white;
+}
+
+.row {
+    white-space: pre-wrap;
+}
+
+.hour{
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.past {
+    background-color: lightblue;
+    color: white;
+}
+
+.present{
+    background-color: lightsalmon;
+    color: white;
+}
+
+.future {
+    background-color: lightseagreen;
+    color: white;
+}
+
+.saver {
+    height: 40px;
+}
+
+
+
+
+
+
+
+
+
+
