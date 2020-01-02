@@ -16,13 +16,13 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <h1>Day Planner</h1>
-                    <p><span id="datetime"></span></p>
+                    <p><span id="dateTime"></span></p>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
+    <div class="container timeContainer">
         <div class="timeSlots">
             <div id="dayTimes">
                 <!-- Structuring the hours and input blocks -->
@@ -67,10 +67,14 @@
     </div>
 
 
-<script>
+<!-- <script>
     var dt = new Date();
-    document.getElementById("datetime").innerHTML = dt.toLocaleString();
-</script>
+    document.getElementById("dateTime").innerHTML = dt.toLocaleString();
+</script> -->
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="./time.js"></script>
     
 </body>
 </html>

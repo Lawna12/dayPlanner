@@ -6,14 +6,21 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     color: rgb(5, 5, 5);
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGdqOJmO8reoVPQ9HFvMuiF4Y-ZFrfswvdT1jTSDjVl4gdQvxi&s");
 }    
 
 header {
     border-bottom: darkslategray 5px solid;
     padding: 10px 0 10px 0;
+    height: 160px;
     margin-bottom: 40px;
     background-color: #ffffff;
 }
+
+h1 {
+    margin-top: 30px;
+}
+
 
 .namers {
     width: 700px;
@@ -21,36 +28,72 @@ header {
     background-color: white;
 }
 
-.row {
-    white-space: pre-wrap;
-}
 
-.hour{
+.hours{
     background-color: #ffffff;
     color: #000000;
+    white-space: pre-wrap;
+    padding-top: 10px;
+    padding-right: 10px;
 }
 
 .past {
     background-color: lightblue;
-    color: white;
+    color: black;
 }
 
 .present{
     background-color: lightsalmon;
-    color: white;
+    color: black;
 }
 
 .future {
-    background-color: lightseagreen;
-    color: white;
+    background-color: palegreen;
+    color: black;
 }
 
 .saver {
     height: 40px;
 }
 
+.saver:hover {
+    background-color: rgb(192, 192, 41);
+}
 
+.timeSlots {
+    text-align: center;
+    display: inline-block;
+}
 
+.timeContainer {
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    left: 50px;
+    margin-bottom: 100px;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .container {
+      text-align: center;
+      left: 50px;
+      width: 80px;
+    }
+    .timeSlots {
+      text-align: center;
+      width: 50px;
+      margin-right: -200px;
+    }
+    .saver {
+      height: 29px;
+      width: 29px;
+    }
+    .hours {
+      margin-left: -80px;
+      margin-top: 50px;
+    }
+  }
 
 
 
