@@ -1,15 +1,20 @@
-//Declaring Variables
-let datetime = $("#dateTime"); //This will display the current day and time
-let rightNow = moment().format("H"); //This reaches out and gets the current time specifically in hour format, ie: 1pm
 
-setInterval(() => { //"Fat arrow" syntax -- this fx makes sure time moves
-    let now = moment(); //Starts the interval when page loads
-    let date = now.format("MM/DD/YYYY  hh:mm a"); //Proper format for date, month, day of, hours, and minutes
-    datetime.text(date); //Display the current date/time
+// Variables created:
+//     -datetime is pulled from the HTML document, but created from the setInterval
+//     funtcion below that pulls date and time from the local computer.
+//     -moment is a function in Javascript that lets you Parse, validate, 
+//     manipulate, and display dates and times in JavaScript.  
+let datetime = $("#dateTime"); 
+let rightNow = moment().format("H");// This moment as a specific hour 
+
+setInterval(() => { //setInterval can be used to automate a task using a regular timed based trigger.
+    let now = moment();//pulling in current date
+    let date = now.format("MM/DD/YYYY  hh:mm a");// format as we need the date and time
+    datetime.text(date); //This calls the function to HTML
 }, 1000);
 
 
-$(".saver").click(function () { // Event listener on save button
+$(".saver").click(function () {//event listener that saves the input to local storgage
     $('input[type="text"]').each(function () {
         const id = $(this).attr('id');
         const value = $(this).val();
@@ -24,8 +29,12 @@ $('input[type="text"]').each(function () {
 });
 
 
-// below is the code that will change the color of the block depending on TOD.
-colorChecks(9, "#nineAm"); //Calling the colorChecks function and passing the arguments of 9 for 9am and its corresponding id
+//Set up by unit of time, and id from the document. This function checks
+//the hour associated with the dayplanner block by id, against the 
+//value associated by retriving "moment" in the rightNow variable.
+//Then sets the color in each block according to past, present, and future
+//as styled in style.css.
+colorChecks(9, "#nineAm"); 
 colorChecks(10, "#tenAm"); 
 colorChecks(11, "#elevenAm"); 
 colorChecks(12, "#twelvePm"); 
@@ -36,13 +45,13 @@ colorChecks(16, "#fourPm");
 colorChecks(17, "#fivePm"); 
 
 function colorChecks(time, theId) {
-    if (rightNow > time) { //If right now is greater than the hour block a "class" is added of "past"
-        $(theId).addClass("past"); // past will turn the block lightBlue
+    if (rightNow > time) { //if moment in hours is greater than time the color is light blue
+        $(theId).addClass("past"); 
     }
-    else if (rightNow < time) { //If right now is less then the hour block a "class" is added of "future"
-        $(theId).addClass("future"); //future will turn the block lightseagreen
+    else if (rightNow < time) { //if moment in hours is less than time the color shows palegreen
+        $(theId).addClass("future"); 
     }
-    else if (rightNow == time) { //If right now is equal to the hour block a "class" is added of "present"
-        $(theId).addClass("present"); // present will turn the block white
+    else if (rightNow == time) { //if moment in hours is equal to time the color shows light salmon.
+        $(theId).addClass("present"); 
     }
 }
