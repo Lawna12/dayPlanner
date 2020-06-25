@@ -14,6 +14,6 @@ A simple calendar application that allows the user to save events for each hour 
 Installation and Use:
 This repo consist of front end web files. In order to run this app locally after cloning the repo, open index.html in your browser of choice.
 
-##Screenshot
+## Screenshot
 ![dayPlannerPic](https://github.com/Lawna12/dayPlanner/blob/master/dayPlanner2pm.jpg)
 
